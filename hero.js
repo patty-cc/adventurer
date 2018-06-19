@@ -10,10 +10,5 @@ Hero.prototype.attacking = function( enemy ) {
   return enemy.healthValue -= this.attack;
 };
 
-// Enemy.prototype.attack = function( hero ) {
-//   return hero.health -= this.attackValue;
-// };
-
-
 
 module.exports = Hero;

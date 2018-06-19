@@ -13,7 +13,7 @@ describe('Enemy', function() {
     enemyRat = new Enemy('Rat', 10, 50);
     enemyLion = new Enemy('Lion', 20, 100);
     hero = new Hero('Link', 100, 15, 'apple');
-  })
+  });
 
   it('should have a description', function() {
     assert.strictEqual(enemyLion.description, 'Lion');

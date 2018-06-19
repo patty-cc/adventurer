@@ -1,6 +1,7 @@
 var assert = require('assert');
 var Hero = require('../hero.js');
 var Enemy = require('../enemy.js');
+var Task = require('../task.js');
 
 describe('Hero', function() {
 
@@ -33,6 +34,14 @@ describe('Hero', function() {
   it('should have an empty task array', function() {
     assert.strictEqual(hero.tasks.length, 0);
   });
+
+  it('should be able to add a task to the array', function() {
+    taskA = new Task('Fight Ganon', 5, 2);
+    taskB = new Task('Save princess', 4, 4);
+    hero.addTask(TaskA);
+    hero.addTask(TaskB);
+    assert.strictEqual(hero.task.length, 2);
+  })
 
   it('should lose 10 health after being attacked from rat', function() {
     enemyRat.attack(hero);
